@@ -318,7 +318,9 @@ h3 {
 }
 
 .cfp-panel .topic-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
 .two-column {
@@ -572,6 +574,11 @@ time,
   font-size: 0.82rem;
 }
 
+.asset-credit a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 @media (max-width: 980px) {
   .site-header {
     align-items: flex-start;
@@ -601,6 +608,10 @@ time,
   .person-grid.compact,
   .two-column {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .cfp-panel .topic-grid {
+    grid-template-columns: 1fr;
   }
 }
 

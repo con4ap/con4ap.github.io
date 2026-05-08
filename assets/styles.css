@@ -330,6 +330,23 @@ h3 {
   align-items: start;
 }
 
+#about {
+  grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.35fr);
+  gap: clamp(36px, 5vw, 72px);
+}
+
+#about h2 {
+  max-width: 520px;
+  font-size: clamp(2.1rem, 3vw, 2.75rem);
+  line-height: 1.14;
+}
+
+#about .prose {
+  max-width: 690px;
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
 .prose {
   color: #31484c;
   font-size: 1.05rem;
@@ -387,6 +404,31 @@ li + li {
 
 .panel h2 {
   font-size: 1.45rem;
+}
+
+.sidebar-stack .panel {
+  overflow: hidden;
+  padding: 0;
+}
+
+.sidebar-stack .panel h2 {
+  margin: 0;
+  padding: 18px 24px;
+  color: var(--white);
+  background: var(--teal);
+}
+
+.sidebar-stack .panel > :not(h2) {
+  margin-right: 24px;
+  margin-left: 24px;
+}
+
+.sidebar-stack .panel > :not(h2):first-of-type {
+  margin-top: 22px;
+}
+
+.sidebar-stack .panel > :not(h2):last-child {
+  margin-bottom: 24px;
 }
 
 .news-item + .news-item {
@@ -557,6 +599,9 @@ time,
 }
 
 .site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 32px 20px;
   color: rgba(255, 255, 255, 0.76);
   background: #0b2528;
@@ -568,10 +613,24 @@ time,
 }
 
 .asset-credit {
-  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 900px);
   margin: 10px auto 0;
   color: rgba(255, 255, 255, 0.58);
   font-size: 0.82rem;
+  text-align: center;
+}
+
+.asset-credit span {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.asset-credit span + span {
+  margin-top: 4px;
 }
 
 .asset-credit a {

@@ -671,6 +671,14 @@ time,
   background: #eef7f6;
 }
 
+.schedule-session-row {
+  background: #e7efef;
+}
+
+.schedule-session-row [role="cell"] {
+  grid-column: 1 / -1;
+}
+
 .schedule-session-label {
   display: block;
   margin-bottom: 6px;
@@ -686,6 +694,17 @@ time,
 
 .schedule-break {
   background: #faf5e9;
+}
+
+.schedule-paper-details {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.schedule-paper-details p {
+  margin: 10px 0 0;
 }
 
 .schedule-head {
